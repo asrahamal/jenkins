@@ -36,6 +36,13 @@ pipeline {
                 sh 'docker-compose up -d'
             }
         }
+        stage('Check Node and npm') {
+    steps {
+        sh 'node -v'
+        sh 'npm -v'
+    }
+}
+
     }
 
     post {
